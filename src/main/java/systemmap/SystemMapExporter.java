@@ -47,11 +47,6 @@ public class SystemMapExporter extends Exporter {
 	}
 
 	@Override
-	public boolean supportsAddressRestrictedExport() {
-		return false;
-	}
-
-	@Override
 	public List<Option> getOptions(DomainObjectService domainObjectService) {
 		return null;
 	}
