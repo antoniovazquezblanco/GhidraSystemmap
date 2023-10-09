@@ -3,7 +3,7 @@ name: Build
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
-  Build Ghidra:
+  build_for_ghidra:
     runs-on: ubuntu-latest
 
     strategy:
