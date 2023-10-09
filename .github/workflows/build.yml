@@ -31,3 +31,14 @@ jobs:
       with:
         gradle-version: 7.3
         arguments: -PGHIDRA_INSTALL_DIR=${{ env.GHIDRA_INSTALL_DIR }}
+
+    - name: Upload binaries to release
+      uses: svenstaro/upload-release-action@v2
+      if: github.ref == 'refs/heads/main'
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file_glob: true
+        file: dist/*ghidra-systemmap.zip
+        prerelease: true
+        overwrite: true
+        body: "Nightly release"
