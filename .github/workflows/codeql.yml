@@ -35,6 +35,8 @@ jobs:
 
     - name: Install Ghidra
       uses: antoniovazquezblanco/setup-ghidra@v1.1.0
+      with:
+        auth_token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v3
