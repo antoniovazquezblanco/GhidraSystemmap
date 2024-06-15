@@ -10,6 +10,10 @@ jobs:
     strategy:
       matrix:
         ghidra:
+          - "11.1.1"
+          - "11.1"
+          - "11.0.3"
+          - "11.0.2"
           - "11.0.1"
           - "11.0"
           - "10.4"
@@ -17,10 +21,6 @@ jobs:
           - "10.3.2"
           - "10.3.1"
           - "10.3"
-          - "10.2.3"
-          - "10.2.2"
-          - "10.2.1"
-          - "10.2"
 
     steps:
     - name: Clone Repository
@@ -30,13 +30,13 @@ jobs:
       uses: actions/setup-java@v4
       with:
         distribution: 'temurin'
-        java-version: '17'
+        java-version: '21'
 
     - name: Install Gradle
       uses: gradle/actions/setup-gradle@v3
 
     - name: Install Ghidra ${{ matrix.ghidra }}
-      uses: antoniovazquezblanco/setup-ghidra@v1.2.3
+      uses: antoniovazquezblanco/setup-ghidra@v1.2.4
       with:
         auth_token: ${{ secrets.GITHUB_TOKEN }}
         version: ${{ matrix.ghidra }}
