@@ -32,6 +32,9 @@ jobs:
           branch: dependabot_setup_ghidra
           delete-branch: true
           title: 'Bump Ghidra version'
+          body: Bump Ghidra versions in the setup-ghidra action to the latest available versions.
+          assignees: antoniovazquezblanco
+          reviewers: antoniovazquezblanco
           labels: |
             dependencies
             github_actions
