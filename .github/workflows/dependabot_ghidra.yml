@@ -31,12 +31,11 @@ jobs:
           add-paths: '.github/'
           branch: dependabot_setup_ghidra
           delete-branch: true
-          author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
-          committer: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           title: 'Bump Ghidra version'
-          body: Bump Ghidra versions in the setup-ghidra action to the latest available versions.
+          body: |
+            Bump Ghidra versions in the setup-ghidra action to the latest available versions.
+            @antoniovazquezblanco
           assignees: antoniovazquezblanco
-          reviewers: antoniovazquezblanco
           labels: |
             dependencies
             github_actions
