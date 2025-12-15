@@ -44,7 +44,7 @@ jobs:
         run: gradle buildExtension -PGHIDRA_INSTALL_DIR=${{ env.GHIDRA_INSTALL_DIR }}
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: Systemmap_Ghidra_${{ matrix.ghidra }}
           path: dist/*.zip
