@@ -1,7 +1,17 @@
-.classpath
-.gradle
-.project
-.settings
+# Output files
 bin/
 dist/
 build/
+
+# JDT
+.classpath
+
+# Gradle
+.gradle
+
+# Eclipse
+.project
+.settings
+
+# MAC OS
+.DS_Store
