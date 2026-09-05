@@ -47,6 +47,11 @@ public class SystemMapExporter extends Exporter {
 	}
 
 	@Override
+	public boolean canExportDomainObject(Class<? extends DomainObject> domainObjectClass) {
+		return Program.class.isAssignableFrom(domainObjectClass);
+	}
+
+	@Override
 	public List<Option> getOptions(DomainObjectService domainObjectService) {
 		return null;
 	}
