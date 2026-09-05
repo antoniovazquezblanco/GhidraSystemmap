@@ -73,7 +73,7 @@ public class SystemMapExporter extends Exporter {
 		try (PrintWriter writer = new PrintWriter(new FileOutputStream(file))) {
 			while (symbolIterator.hasNext()) {
 				try {
-					monitor.checkCanceled();
+					monitor.checkCancelled();
 				} catch (CancelledException e) {
 					throw new ExporterException(e);
 				}
